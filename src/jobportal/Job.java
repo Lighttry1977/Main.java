@@ -43,7 +43,4 @@ public class Job{
                 ", budget=" + budget +
                 '}';
     }
-
-    public void display() {
-    }
 }
