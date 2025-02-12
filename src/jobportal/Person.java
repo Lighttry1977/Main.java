@@ -11,5 +11,6 @@ public abstract class Person {
         return name;
     }
 
+    // Абстрактный метод для отображения информации
     public abstract void display();
 }

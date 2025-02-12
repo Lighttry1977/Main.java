@@ -1,7 +1,11 @@
+
 package jobportal;
+
+import models.Freelancer;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class JobPortal {
     private String name;
@@ -30,6 +34,14 @@ public class JobPortal {
         freelancers.add(freelancer);
     }
 
+    public List<Job> getJobs() {
+        return jobs;
+    }
+
+    public List<Freelancer> getFreelancers() {
+        return freelancers;
+    }
+
     @Override
     public String toString() {
         return "JobPortal{" +
@@ -37,7 +49,20 @@ public class JobPortal {
                 ", jobs=" + jobs +
                 ", freelancers=" + freelancers +
                 '}';
+    }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        JobPortal portal = (JobPortal) obj;
+        return name.equals(portal.name) &&
+                jobs.equals(portal.jobs) &&
+                freelancers.equals(portal.freelancers);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, jobs, freelancers);
     }
 }

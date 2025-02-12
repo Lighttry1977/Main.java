@@ -1,3 +1,4 @@
+
 package jobportal;
 
 public class Job{
@@ -42,5 +43,8 @@ public class Job{
                 ", description='" + description + '\'' +
                 ", budget=" + budget +
                 '}';
+    }
+
+    public void display() {
     }
 }
